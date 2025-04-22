@@ -9,7 +9,7 @@
 .banner-top {
  margin-top: 0 !important;
  .img-mobile {
-  height: 346px;
+  height: 184px;
   img {
    width: 100%;
    height: 100%;
@@ -794,12 +794,10 @@
     height: 100%;
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: 63px 1fr;
+    padding: 20px;
     align-items: center;
-    @include minWidth(567px) {
-        gap: 10px;
-        grid-template-columns: 63px 1fr;
-        padding: 3px;
+    @include minWidth(567px) {    
         padding: 22px 20px;
     }
  }
