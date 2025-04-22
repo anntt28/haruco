@@ -14,6 +14,11 @@
     @content;
   }
 }
+@mixin minmaxWidth($value,$valuemax) {
+  @media (min-width: $value) and (max-width: $valuemax){
+    @content;
+  }
+}
 @mixin maxWidth($value) {
   @media (max-width: $value) {
     @content;

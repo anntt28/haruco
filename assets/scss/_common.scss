@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
 }
-
+:root {
+  --n: 30;
+  --t: 4px;
+  --d: 4deg;
+}
 html {
   scroll-behavior: smooth;
   font-size: 12px;
