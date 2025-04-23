@@ -577,10 +577,15 @@ textarea {
 .heading-type-2 h2 {
   text-transform: uppercase;
   font-family: "Plus Jakarta Sans";
-  font-size: 28px;
+  font-size: 16px;
   line-height: 1.2;
   color: #121F38;
   position: relative;
+}
+@media (min-width: 567px) {
+  .heading-type-2 h2 {
+    font-size: 28px;
+  }
 }
 .heading-type-2 h2::before {
   content: "";
@@ -9917,9 +9922,23 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 .footer-middle a:hover {
   color: #121F38;
 }
+.footer-middle .box-menu {
+  margin-bottom: 25px;
+}
 .footer-middle .box-menu .line-FB9E82 {
   margin-top: 27px;
   margin-bottom: 27px;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .footer-middle .box-menu .line-FB9E82 {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-middle .box-menu {
+    margin-bottom: 0;
+  }
 }
 .footer-middle .des-intro {
   font-size: 17px;
@@ -10194,7 +10213,7 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 }
 
 .swiper-pagination-bullet-active {
-  background: #8DC540;
+  background: #E2313B;
 }
 
 .swiper-button {
@@ -10540,11 +10559,12 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 
 .content-introduce {
   display: grid;
-  grid-template-columns: 1fr 471px;
+  gap: 30px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .content-introduce {
     gap: 53px;
+    grid-template-columns: 1fr 471px;
   }
 }
 
@@ -10587,19 +10607,16 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   visibility: hidden;
 }
 
-.product-hataco-slider {
+.product-haruco-slider {
   padding-bottom: 5px;
 }
-.product-hataco-slider .swiper-wrapper {
-  align-items: center;
-}
-.product-hataco-slider .swiper-slide {
+.product-haruco-slider .swiper-slide {
   background-color: #fff;
   box-shadow: 0px 2px 8px 0px rgba(209, 114, 83, 0.2196078431);
   border-radius: 20px;
   padding: 8px;
 }
-.product-hataco-slider h4 {
+.product-haruco-slider h4 {
   padding-top: 0px;
   color: #E2313B;
   font-size: 1rem;
@@ -10611,13 +10628,13 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   padding-top: 33px;
   padding-bottom: 18px;
 }
-.product-hataco-slider a {
+.product-haruco-slider a {
   transition: all 0.3s;
 }
-.product-hataco-slider a:hover {
+.product-haruco-slider a:hover {
   color: #E2313B;
 }
-.product-hataco-slider .img {
+.product-haruco-slider .img {
   height: 219px;
   overflow: hidden;
   border-radius: 20px;
@@ -10796,27 +10813,74 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   overflow: hidden;
 }
 
+.product-best-seller .content {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #FFF2E4;
+}
+.product-best-seller .banner .img-banner {
+  height: 214px;
+  object-fit: cover;
+  object-position: right;
+}
+@media (min-width: 567px) and (max-width: 1023px) {
+  .product-best-seller .banner .img-banner {
+    height: 350px;
+  }
+}
+@media (min-width: 1024px) {
+  .product-best-seller .banner .img-banner {
+    height: 100%;
+  }
+}
 .product-best-seller .banner .box-text {
-  position: absolute;
-  top: 43%;
   transform: translateY(-50%);
-  left: 20px;
-  max-width: 557px;
+  padding: 0 15px;
   text-align: center;
+}
+@media (min-width: 567px) and (max-width: 1023px) {
+  .product-best-seller .banner .box-text {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    max-width: 557px;
+    padding: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 1024px) {
+  .product-best-seller .banner .box-text {
+    position: absolute;
+    top: 43%;
+    left: 20px;
+    max-width: 557px;
+    padding: 0;
+  }
 }
 .product-best-seller .banner .box-text h2 {
   background-image: url("../images/bg-heading.png");
   color: #fff;
   font-family: "Plus Jakarta Sans";
-  font-size: 32px;
+  font-size: 20px;
   text-transform: uppercase;
-  padding: 15px 0 8px;
-  width: 451px;
-  margin: 0 auto 18px;
+  padding: 0px;
+  width: 300px;
+  margin: 0 auto 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .product-best-seller .banner .box-text h2 {
+    font-size: 32px;
+    width: 451px;
+    padding: 15px 0 8px;
+    margin: 0 auto 18px;
+  }
 }
 .product-best-seller .box-slider {
   background: linear-gradient(90deg, #e2313b 0%, #ff6d3e 100%);
-  padding: 31px 37px;
+  padding: 15px 15px 25px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   position: relative;
@@ -10827,6 +10891,11 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 }
 .product-best-seller .box-slider .swiper-button-next-small {
   right: 15px;
+}
+@media (min-width: 768px) {
+  .product-best-seller .box-slider {
+    padding: 31px 37px;
+  }
 }
 
 .products-by-category-last {
@@ -10867,52 +10936,85 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 
 .content-review-customer {
   display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .content-review-customer {
     gap: 30px;
+    flex-direction: row;
   }
 }
 .content-review-customer .intro-review {
   position: relative;
+  text-align: center;
 }
 .content-review-customer .intro-review .box-text {
   position: absolute;
-  top: 82px;
-  left: 50%;
-  max-width: 553px;
+  top: 14px;
+  left: 49%;
+  padding: 0 15px;
   text-align: center;
   transform: translateX(-50%);
   width: 100%;
   margin: 0 auto;
   color: #fff;
 }
+@media (min-width: 768px) {
+  .content-review-customer .intro-review .box-text {
+    top: 82px;
+    max-width: 553px;
+    padding: 0;
+  }
+}
 .content-review-customer .intro-review .box-text h2 {
   text-transform: uppercase;
-  margin-bottom: 28px;
+  margin-bottom: 12px;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .content-review-customer .intro-review .box-text h2 {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
 }
 .content-review-customer .intro-review .box-text p {
   line-height: 2;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .content-review-customer .intro-review .box-text p {
+    font-size: 16px;
+  }
 }
 
 .list-customer-reviews {
-  width: 50%;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
+@media (min-width: 1024px) {
+  .list-customer-reviews {
+    width: 50%;
+  }
+}
 
 .item-customer-reviews {
-  display: grid;
-  grid-template-columns: 159px 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 17px;
   background: #fff;
   box-shadow: 0px 2px 8px 0px rgba(209, 114, 83, 0.2196078431);
   border-radius: 40px;
   padding: 18px;
+}
+@media (min-width: 768px) {
+  .item-customer-reviews {
+    display: grid;
+    grid-template-columns: 159px 1fr;
+  }
 }
 .item-customer-reviews .box-text h6 {
   font-size: 20px;
@@ -11048,11 +11150,15 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   width: 100%;
   display: grid;
 }
+@media (min-width: 768px) {
+  .blog-news .blog-content .blog-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+  }
+}
 @media (min-width: 1200px) {
   .blog-news .blog-content .blog-list {
     width: 50%;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 30px;
   }
 }
 .blog-news .blog-content .blog-list .item-blog-new-simple .image-cover-h {
@@ -11173,66 +11279,6 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   font-weight: 400;
   line-height: 25px;
   text-transform: lowercase;
-}
-
-.video-hataco .heading-haruco {
-  margin-bottom: 16px;
-}
-
-.content-video-hataco {
-  position: relative;
-}
-
-.content-video-hataco-mobile .slide-main-video {
-  position: relative;
-}
-.content-video-hataco-mobile .slider-thumb-video {
-  margin-top: 13px;
-  position: relative;
-}
-.content-video-hataco-mobile .slider-thumb-video .image-cover-h {
-  padding-top: 67%;
-}
-.content-video-hataco-mobile .slider-thumb-video .img::after {
-  content: "";
-  background-image: url("../images/ic-play.svg");
-  width: 25px;
-  height: 25px;
-  background-size: contain;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.slider-video-hataco .video-slider {
-  width: 100%;
-  height: 273px;
-}
-@media (min-width: 768px) {
-  .slider-video-hataco .video-slider {
-    height: 379px;
-  }
-}
-.slider-video-hataco .play-video-slider {
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-.slider-video-hataco .play-video-slider:not(.active) {
-  cursor: pointer;
-}
-.slider-video-hataco .play-video-slider.active {
-  display: none;
-}
-.slider-video-hataco .play-video-slider::after {
-  content: url("../images/ic-play.svg");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .list-featured-haruco {

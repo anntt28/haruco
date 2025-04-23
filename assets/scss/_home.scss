@@ -67,9 +67,10 @@
 }
 .content-introduce {
   display: grid;
-  grid-template-columns: 1fr 471px;
-  @include minWidth(768px) {
+  gap: 30px;
+  @include minWidth(1024px) {
     gap: 53px;
+    grid-template-columns: 1fr 471px;
   }
 }
 .img {
@@ -109,11 +110,8 @@
     visibility: hidden;
   }
 }
-.product-hataco-slider {
+.product-haruco-slider {
   padding-bottom: 5px;
-  .swiper-wrapper {
-    align-items: center;
-  }
   .swiper-slide {
     background-color: $light;
     box-shadow: 0px 2px 8px 0px #d1725338;
@@ -287,29 +285,66 @@
   }
 }
 .product-best-seller {
+  .content{
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #FFF2E4;
+  }
   .banner {
+    .img-banner {
+      height: 214px;
+      object-fit: cover;
+      object-position: right;
+      @include minmaxWidth(567px, 1023px){
+        height: 350px;
+      }
+      @include minWidth(1024px) {
+        height: 100%;
+      }
+    }
     .box-text {
-      position: absolute;
-      top: 43%;
       transform: translateY(-50%);
-      left: 20px;
-      max-width: 557px;
+      padding: 0 15px;
       text-align: center;
+      @include minmaxWidth(567px, 1023px){
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        max-width: 557px;
+        padding: 0;
+        transform: translate(-50%, -50%);
+      }
+      @include minWidth(1024px) {
+        position: absolute;
+        top: 43%;
+        left: 20px;
+        max-width: 557px;
+        padding: 0;
+      }
       h2 {
         background-image: url("../images/bg-heading.png");
         color: $light;
         font-family: "Plus Jakarta Sans";
-        font-size: 32px;
+        font-size: 20px;
         text-transform: uppercase;
-        padding: 15px 0 8px;
-        width: 451px;
-        margin: 0 auto 18px;
+        padding: 0px;
+        width: 300px;
+        margin: 0 auto 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include minWidth(768px) {
+          font-size: 32px;
+          width: 451px;
+          padding: 15px 0 8px;
+          margin: 0 auto 18px;
+        }
       }
     }
   }
   .box-slider {
     background: linear-gradient(90deg, #e2313b 0%, #ff6d3e 100%);
-    padding: 31px 37px;
+    padding: 15px 15px 25px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     position: relative;
@@ -319,6 +354,9 @@
     }
     .swiper-button-next-small {
       right: 15px;
+    }
+    @include minWidth(768px) {
+      padding: 31px 37px;
     }
   }
 }
@@ -355,48 +393,71 @@
 }
 .content-review-customer {
   display: flex;
-  @include minWidth(768px) {
+  flex-direction: column;
+  gap: 30px;
+  @include minWidth(1024px) {
     gap: 30px;
+    flex-direction: row;
   }
   .intro-review {
     position: relative;
+    text-align: center;
     .box-text {
       position: absolute;
-      top: 82px;
-      left: 50%;
-      max-width: 553px;
+      top: 14px;
+      left: 49%;
+      padding: 0 15px;
       text-align: center;
       transform: translateX(-50%);
       width: 100%;
       margin: 0 auto;
       color: $light;
+      @include minWidth(768px) {
+        top: 82px;
+        max-width: 553px;
+        padding: 0;
+      }
       h2 {
         text-transform: uppercase;
-        margin-bottom: 28px;
+        margin-bottom: 12px;
         font-weight: 500;
-        font-size: 32px;
+        font-size: 20px;
+        @include minWidth(768px) {
+          font-size: 32px;
+          margin-bottom: 28px;
+        }
       }
       p {
         line-height: 2;
+        font-size: 12px;
+        @include minWidth(768px) {
+          font-size: 16px;
+        }
       }
     }
   }
 }
 .list-customer-reviews {
-  width: 50%;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  @include minWidth(1024px) {
+    width: 50%;
+  }
 }
 .item-customer-reviews {
-  display: grid;
-  grid-template-columns: 159px 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 17px;
   background: $light;
   box-shadow: 0px 2px 8px 0px rgba(209, 114, 83, 0.2196078431);
   border-radius: 40px;
   padding: 18px;
+  @include minWidth(768px) {
+    display: grid;
+  grid-template-columns: 159px 1fr;
+  }
   .box-text {
     h6 {
       font-size: 20px;
@@ -529,10 +590,12 @@
     .blog-list {
       width: 100%;
       display: grid;
-      @include minWidth(1200px) {
-        width: 50%;
+      @include minWidth(768px) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         column-gap: 30px;
+      }
+      @include minWidth(1200px) {
+        width: 50%;
       }
       .item-blog-new-simple {
         .image-cover-h {
@@ -653,68 +716,6 @@
       font-weight: 400;
       line-height: 25px;
       text-transform: lowercase;
-    }
-  }
-}
-.video-hataco {
-  .heading-haruco {
-    margin-bottom: 16px;
-  }
-}
-.content-video-hataco {
-  position: relative;
-}
-.content-video-hataco-mobile {
-  .slide-main-video {
-    position: relative;
-  }
-  .slider-thumb-video {
-    margin-top: 13px;
-    position: relative;
-    .image-cover-h {
-      padding-top: 67%;
-    }
-    .img {
-      &::after {
-        content: "";
-        background-image: url("../images/ic-play.svg");
-        width: 25px;
-        height: 25px;
-        background-size: contain;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-  }
-}
-.slider-video-hataco {
-  .video-slider {
-    width: 100%;
-    height: 273px;
-    @include minWidth(768px) {
-      height: 379px;
-    }
-  }
-  .play-video-slider {
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    &:not(.active) {
-      cursor: pointer;
-    }
-    &.active {
-      display: none;
-    }
-    &::after {
-      content: url("../images/ic-play.svg");
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
   }
 }

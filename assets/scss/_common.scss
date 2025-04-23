@@ -577,10 +577,13 @@ textarea {
   h2{
     text-transform: uppercase;
     font-family: "Plus Jakarta Sans";
-    font-size: 28px;
+    font-size: 16px;
     line-height: 1.2;
     color: $main-01;
     position: relative;
+    @include minWidth(567px) {
+      font-size: 28px;
+     }
     &::before{
       content: '';
       display: block;
