@@ -10005,20 +10005,29 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   margin-left: 7px;
 }
 .footer-middle .menu-ft {
-  list-style-type: circle;
+  list-style-type: none;
 }
 .footer-middle .menu-ft li {
   color: #8DC540;
   font-size: 17px;
   font-weight: 300;
   line-height: 2;
-  list-style-type: disc;
-  list-style-position: inside;
 }
 @media (min-width: 576px) {
   .footer-middle .menu-ft li {
     font-size: 15px;
   }
+}
+.footer-middle .menu-ft li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-middle .menu-ft li a .icon {
+  display: flex;
+}
+.footer-middle .menu-ft li a:hover svg path {
+  fill: #121F38;
 }
 .footer-middle .maps {
   border-top: 1px solid #DFDFDF;

@@ -162,16 +162,29 @@
     }
   }
   .menu-ft{
-    list-style-type: circle;
+    list-style-type: none;
     li{
       color: #8DC540;
       font-size: 17px;
       font-weight: 300;
       line-height: 2;
-      list-style-type: disc;
-      list-style-position: inside;
       @include minWidth(576px){
         font-size: 15px;
+      }
+      a{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .icon{
+          display: flex;
+        }
+        &:hover{
+          svg{
+            path{
+              fill: $main-01;
+            }
+          }
+        }
       }
     }
   }
