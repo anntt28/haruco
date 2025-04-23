@@ -2,7 +2,7 @@
  section {
   margin-top: 41px;
   @include minWidth(768px) {
-   margin-top: 119px;
+   margin-top: 50px;
   }
  }
 }
@@ -18,21 +18,30 @@
  }
 }
 .introduce {
+ .img-line {
+  margin-top: 23px;
+  margin-bottom: 23px;
+ }
  .text {
   .heading {
-   font-family: "Carattere", cursive;
-   font-size: 40px;
+   font-family: "SVN-Drainwood";
+   font-size: 36px;
    color: #a4a4a4;
    font-weight: 400;
-   line-height: 23px;
+   line-height: 1.5;
    margin-bottom: 18px;
+   background: linear-gradient(90deg, #e2313b 0%, #ff6d3e 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
    @include minWidth(768px) {
     font-size: 48px;
     margin-bottom: 22px;
    }
   }
   h2 {
-   color: $primary;
+   color: $main-01;
+   text-transform: uppercase;
+   font-family: "Plus Jakarta Sans";
   }
   p {
    color: #525252;
@@ -42,40 +51,43 @@
     margin-right: 30px;
    }
   }
-  .box-description {
-   border-left: 2px solid $orange-1;
-   padding-left: 16px;
-   padding-top: 13px;
-   padding-bottom: 13px;
-   margin-bottom: 20px;
-   @include minWidth(768px) {
-    padding-left: 27px;
-    padding-top: 33px;
-    margin-bottom: 0;
-   }
-   .description {
-    margin-bottom: 0px;
-    p {
-     &:last-child {
-      margin-bottom: 0;
-     }
-    }
-    @include minWidth(768px) {
-     margin-bottom: 39px;
-    }
-   }
-  }
- }
- .img {
-  margin-bottom: 20px;
-  @include minWidth(768px) {
+
+  .description {
    margin-bottom: 0px;
+   p {
+    &:last-child {
+     margin-bottom: 0;
+    }
+   }
+   @include minWidth(768px) {
+    margin-bottom: 39px;
+   }
   }
  }
 }
+.content-introduce {
+ display: grid;
+ grid-template-columns: 1fr 471px;
+ @include minWidth(768px) {
+  gap: 53px;
+ }
+}
+.img {
+ margin-bottom: 20px;
+ @include minWidth(768px) {
+  margin-bottom: 0px;
+ }
+}
 .product-hataco {
- .heading-hataco {
-  margin-bottom: 12px;
+ .content-product-hatoco {
+  background-image: url("../images/bg-category.png");
+  padding: 66px 15px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 20px;
+ }
+ .heading-haruco {
+  margin-bottom: 37px;
  }
  .swiper-button-prev {
   top: 37%;
@@ -93,64 +105,43 @@
   height: 8px;
   border-radius: 100%;
  }
+ .swiper-button-disabled {
+  visibility: hidden;
+ }
 }
 .product-hataco-slider {
+   padding-bottom: 5px;
  .swiper-wrapper {
   align-items: center;
  }
  .swiper-slide {
-  &.swiper-slide-active {
-   .box-img {
-    height: 135px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include minWidth(576px) {
-     height: 220px;
-    }
-    @include minWidth(768px) {
-     height: 230px;
-    }
+   background-color: $light;
+   box-shadow: 0px 2px 8px 0px #D1725338;
+   border-radius: 20px;
+   padding: 8px;
+ }
+ h4 {
+  padding-top: 0px;
+  color: $primary;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+  line-height: 27px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding-top: 33px;
+  padding-bottom: 18px;
+ }
+ a{
+   transition: all 0.3s;
+   &:hover{
+      color: $primary;
    }
-   .img {
-    transform: scale(1.1);
-    position: relative;
-    border-radius: 25px;
-    height: max-content;
-    img {
-     object-fit: contain;
-    }
-    &::before {
-     content: "";
-     position: absolute;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     z-index: -1;
-     margin: -5px; /* !importanté */
-     border-radius: inherit; /* !importanté */
-     background: linear-gradient(to right, #5b9e47, #d2eab0);
-    }
-   }
-  }
-  &:not(.swiper-slide-active) {
-   h4 {
-    @include minWidth(480px) {
-     padding-top: 15px;
-    }
-   }
-  }
-  h4 {
-   padding-top: 0px;
-   color: $primary;
-   font-size: 1rem;
-   text-align: center;
-   font-weight: 600;
-   line-height: 27px;
-   text-transform: uppercase;
-   margin: 0 auto;
-  }
+ }
+ .img{
+   height: 219px;
+   overflow: hidden;
+   border-radius: 20px;
  }
 }
 .list-product-best-seller {
@@ -391,7 +382,7 @@
  }
 }
 .why-choose-me {
- .heading-hataco {
+ .heading-haruco {
   p {
    color: #505050;
    font-size: 15px;
@@ -511,7 +502,7 @@
   padding-top: 124px;
   padding-bottom: 124px;
  }
- .heading-hataco {
+ .heading-haruco {
   color: $light;
   margin-bottom: 35px;
   p {
@@ -576,7 +567,7 @@
  @include minWidth(768px) {
   margin-bottom: 119px;
  }
- .heading-hataco {
+ .heading-haruco {
   margin-bottom: 11px;
   @include minWidth(1024px) {
    margin-bottom: 24px;
@@ -704,7 +695,7 @@
  }
 }
 .video-hataco {
- .heading-hataco {
+ .heading-haruco {
   margin-bottom: 16px;
  }
 }
@@ -774,34 +765,34 @@
   gap: 30px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
  }
- @include minmaxWidth(567px, 1199px){
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+ @include minmaxWidth(567px, 1199px) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
  }
 }
 .item-featured-haruco {
  position: relative;
  background-size: 100% 100%;
  border-radius: 10px;
- .bg-image{
-    width: 100%;
-    height: 100%;
+ .bg-image {
+  width: 100%;
+  height: 100%;
  }
- .content{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 63px 1fr;
-    padding: 20px;
-    align-items: center;
-    @include minWidth(567px) {    
-        padding: 22px 20px;
-    }
+ .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 63px 1fr;
+  padding: 20px;
+  align-items: center;
+  @include minWidth(567px) {
+   padding: 22px 20px;
+  }
  }
- h4{
-    font-size: 20px;
+ h4 {
+  font-size: 20px;
  }
 }

@@ -107,8 +107,9 @@ $(function () {
       slidesOffsetBefore:15,
     },
     1200:{
-      slidesPerView: 6.1,
-      spaceBetween: 50,
+      slidesPerView: 5,
+      spaceBetween: 25,
+      allowTouchMove: false,
     },
   },
  });

@@ -1,74 +1,75 @@
-.receive-incentives{
-  background-image: url(../images/bg-form.png);
+.footer-m{
+  background-image: url("../images/bg-footer.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 54px;
-  padding-bottom: 54px;
-  .text{
-    text-align: center;
+  a{
     color: $light;
-    h4{
-      color: #FFF;
-      font-size: 22px;
-      font-weight: 700;
-      text-transform: uppercase; 
-      @include minWidth(768px){
-        font-size: 30px;
-      }
-    }
-    p{
-      color: #FFF;
-      font-size: 15px;
-      font-weight: 400;
-      letter-spacing: -0.48px; 
-      margin-bottom: 0;
-      @include minWidth(768px){
-        font-size: 16px;
-        font-weight: 600;
-      }
+    transition: all 0.3s;
+  }
+  span{
+    color: $light;
+  }
+}
+.receive-incentives{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  h5{
+    font-size: 20px;
+    font-family: "Plus Jakarta Sans";
+    color: $light;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  p{
+    color: $light;
+  }
+}
+.form-receive{
+  form{
+    position: relative;
+  }
+  label{
+    width: 100%;
+  }
+  .wpcf7-form-control-wrap{
+    
+  }
+  .wpcf7-email{
+    border-radius: 50px;
+    background: #FFF;
+    border: none;
+    height: 45px;
+    width: 100%;
+    padding: 12px 27px;
+    outline: none;
+  }
+  .wpcf7-submit{
+    position: absolute;
+    right: 19px;
+    top: 26px;
+    background-color: transparent;
+    text-indent: -9999px;
+    background-image: url(../images/icon/ic_plane.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+    white-space: nowrap;
+    border: none;
+    transform: translateY(-50%);
+  }
+  .wpcf7-spinner{
+    position: absolute;
+    right: 23px;
+    top: 20%;
+    @include minWidth(768px){
+      right: -50px;
     }
   }
-  .form-discount{
-    form{
-      position: relative;
-    }
-    label{
-      width: 100%;
-    }
-    .wpcf7-email{
-      border-radius: 50px;
-      background: #FFF;
-      border: none;
-      height: 45px;
-      width: 100%;
-      padding: 12px 27px;
-      outline: none;
-    }
-    .wpcf7-submit{
-      position: absolute;
-      right: 19px;
-      top: 22px;
-      background-color: transparent;
-      text-indent: -9999px;
-      background-image: url(../images/ic-plane.svg);
-      height: 26px;
-      width: 26px;
-      white-space: nowrap;
-      border: none;
-      transform: translateY(-50%);
-    }
-    .wpcf7-spinner{
-      position: absolute;
-      right: 23px;
-      top: 20%;
-      @include minWidth(768px){
-        right: -50px;
-      }
-    }
-    .wpcf7-not-valid-tip{
-      margin-top: 5px;
-    }
+  .wpcf7-not-valid-tip{
+    margin-top: 5px;
   }
 }
 .footer-middle{
@@ -79,8 +80,19 @@
   }
   a{
     &:hover{
-      color: $primary;
+      color: $main-01;
     }
+  }
+  .box-menu{
+    .line-FB9E82{
+      margin-top: 27px;
+      margin-bottom: 27px;
+    }
+  }
+  .des-intro{
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 400;
   }
   .info-company-ft{
     border-bottom:  1px solid #DFDFDF;
@@ -90,9 +102,18 @@
       border-bottom:  0px solid #DFDFDF;
       padding-bottom: 0px;
       margin-bottom: 0px;
+      max-width: 514px;
     }
     .logo{
-      margin-bottom: 24px;
+      margin-bottom: 10px;
+    }
+    .info{
+      border-top: 1px solid $color-FB9E82;
+      padding-top: 20px;
+    }
+    .list-sns-ic{
+      gap: 10px;
+      margin-top: 19px;
     }
     .list-info{
       li{
@@ -114,7 +135,7 @@
     }
     .info{
       h5{
-        color: $primary;
+        color: $light;
         font-size: 18px;
         font-weight: 700;
         line-height: 29px; 
@@ -136,9 +157,9 @@
     list-style-type: circle;
     li{
       color: #8DC540;
-      font-size: 13px;
+      font-size: 17px;
       font-weight: 300;
-      line-height: 40px;
+      line-height: 2;
       list-style-type: disc;
       list-style-position: inside;
       @include minWidth(576px){
@@ -163,12 +184,12 @@
   }
 }
 .footer-bottom{
-  padding: 27px 0;
+  padding: 23px 0;
   @include minWidth(768px){
-    border-top: 1px solid #DFDFDF;
+    border-top: 1px solid $color-FB9E82;
   }
   .text{
-    color: #868686;
+    color: $light;
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
@@ -178,29 +199,25 @@
   }
 }
 .title-ft{
-  margin-bottom: 12px;
   h4{
-    color: #333;
+
+    color: $light;
     font-size: 20px;
     font-weight: 400;
     text-transform: uppercase; 
   }
-  .line{
-    background-color: #CFCFCF;
-    height: 1px;
-    position: relative;
-    width: 70%;
-    @include minWidth(768px){
-      width: 100%;
-    }
-    &::after{
-      content: '';
-      background-color: #8DC540;
-      height: 1px;
-      width: 70%;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+}
+.line-FB9E82{
+  background-color: $color-FB9E82;
+  height: 1px;
+  position: relative;
+  width: 70%;
+  @include minWidth(768px){
+    width: 100%;
   }
+}
+.list-menu-ft-bot {
+  text-transform: uppercase;
+  gap: 30px;
+  margin-top: 5px;
 }
