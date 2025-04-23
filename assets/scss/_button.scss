@@ -3,38 +3,39 @@
     box-shadow: none;
   }
 }
-.btn-linear-rounded{
+.btn-linear-rounded {
   border-radius: 50px;
-  background: linear-gradient(71deg, #E72B29 0%, #F26D42 100%); 
+  background: linear-gradient(71deg, #e72b29 0%, #f26d42 100%);
 }
-.btn-border-rounded{
+.btn-border-rounded {
   border-radius: 50px;
-  border: 2px solid #5B9E47;
-  background: #FFF; 
-  color: #5B9E47;
-  padding: 5px 15px;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box, 
+  linear-gradient(90deg, #e2313b 0%, #ff6d3e 100%) border-box;
+  color: $primary;
+  padding: 3px 15px;
   display: inline-flex;
   align-items: center;
   transition: all 0.3s;
-  svg{
+  svg {
     margin-left: 4px;
   }
-  &:hover{
-    color: #5B9E47;
+  &:hover {
+    color: $primary;
     opacity: 0.5;
   }
 }
-.btn-base{
+.btn-base {
   border-radius: 50px;
   color: $light;
   padding: 5px 15px;
   display: inline-flex;
   align-items: center;
   transition: all 0.3s;
-  svg{
+  svg {
     margin-left: 7px;
   }
-  &:hover{
+  &:hover {
     color: $light;
     opacity: 0.5;
   }

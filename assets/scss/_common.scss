@@ -580,5 +580,27 @@ textarea {
     font-size: 28px;
     line-height: 1.2;
     color: $main-01;
+    position: relative;
+    &::before{
+      content: '';
+      display: block;
+      width: 100%;
+      background-color: $primary;
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      height: 2px;
+    }
+    &::after{
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      position: absolute;
+      right: 0;
+      bottom: -12px;
+      background-color: $primary;
+    }
   }
 }

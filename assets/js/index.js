@@ -77,9 +77,35 @@ $(function () {
   spaceBetween: 30,
   breakpoints: {
     768: {
-        slidesPerView: 2,
+        slidesPerView: 4,
         spaceBetween: 30,
     },
+  },
+ });
+ var swiper5 = new Swiper(".slider-product-by-category", {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    768: {
+        slidesPerView: 5,
+        spaceBetween: 24,
+    },
+  },
+ });
+ var swiper5 = new Swiper(".slider-product-by-category-small", {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    768: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-small",
+    prevEl: ".swiper-button-prev-small",
   },
  });
  var swiper6 = new Swiper(".product-hataco-slider", {
@@ -93,8 +119,8 @@ $(function () {
   slidesPerGroup: 1,
   spaceBetween: 30,
   navigation: {
-   nextEl: ".swiper-button-next",
-   prevEl: ".swiper-button-prev",
+   nextEl: ".swiper-button-next-cate",
+   prevEl: ".swiper-button-prev-cate",
   },
   pagination: {
     el: ".swiper-pagination-3",
