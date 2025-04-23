@@ -361,7 +361,10 @@
   }
 }
 .products-by-category-last {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
+  @include minWidth(768px) {
+    margin-bottom: 200px;
+  }
 }
 .slider-product-by-category {
   .swiper-wrapper {
