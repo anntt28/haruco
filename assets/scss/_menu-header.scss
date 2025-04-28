@@ -31,6 +31,10 @@
       span {
         letter-spacing: -0.45px;
         font-weight: 400;
+        font-size: 11px;
+        @include minWidth(1400px) {
+          font-size: 15px;
+        }
       }
     }
   }
