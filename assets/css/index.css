@@ -11688,6 +11688,17 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   cursor: pointer;
 }
 
+.before-loop-wrapper-filter .des {
+  margin-bottom: 26px;
+  color: #545454;
+  font-size: 14px;
+  line-height: 1.7;
+}
+@media (min-width: 768px) {
+  .before-loop-wrapper-filter .des {
+    font-size: 17px;
+  }
+}
 .before-loop-wrapper-filter .filter-grid {
   gap: 12px;
 }

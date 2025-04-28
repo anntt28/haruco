@@ -207,6 +207,15 @@
  }
 }
 .before-loop-wrapper-filter {
+  .des{
+    margin-bottom: 26px;
+    color: $grey-7;
+    font-size: 14px;
+    line-height: 1.7;
+    @include minWidth(768px) {
+      font-size: 17px;
+     }
+  }
  .filter-grid {
   gap: 12px;
   .icon{
