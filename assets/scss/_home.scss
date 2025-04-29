@@ -50,6 +50,9 @@
    &:not(:last-child) {
     margin-right: 30px;
    }
+   @include minWidth(768px) {
+    font-size: 17px;
+   }
   }
 
   .description {

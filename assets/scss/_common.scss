@@ -21,28 +21,13 @@ html {
  font-family: "SVN-Drainwood";
  src: url("../fonts/SVN-Drainwood.otf");
 }
+@font-face {
+  font-family: "SVN-Peristiwa";
+  src: url("../fonts/SVN-Peristiwa.otf");
+ }
 body {
  font-family: "Roboto Flex", sans-serif;
  color: $grey-1;
-}
-
-.bg-8378F7 {
- background-color: #8378f7 !important;
-}
-.bg-FFB82E {
- background-color: #ffb82e !important;
-}
-.bg-20CB89 {
- background-color: #20cb89 !important;
-}
-.bg-F15EAE {
- background-color: #f15eae !important;
-}
-.bg-01D5E2 {
- background-color: #01d5e2 !important;
-}
-.bg-1D7AF3 {
- background-color: #1d7af3 !important;
 }
 .container-fluid {
  padding: 0 20px;
@@ -605,5 +590,38 @@ textarea {
       bottom: -12px;
       background-color: $primary;
     }
+  }
+}
+.heading-type-3{
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $main-01;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  margin-bottom: 56px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  &::before{
+    content: '';
+    background-image: url("../images/wave-line-left.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 164px;
+    height: 9px;
+  }
+  &::after{
+    content: '';
+    background-image: url("../images/wave-line-right.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 164px;
+    height: 9px;
   }
 }
