@@ -600,12 +600,15 @@ textarea {
   color: $main-01;
   font-family: "Plus Jakarta Sans";
   font-weight: 500;
-  margin-bottom: 56px;
+  margin-bottom: 45px;
   position: relative;
   display: flex;
   align-items: center;
   gap: 15px;
   justify-content: center;
+  @include minWidth(567px) {
+    margin-bottom: 56px;
+   }
   &::before{
     content: '';
     background-image: url("../images/wave-line-left.png");
@@ -614,6 +617,10 @@ textarea {
     background-repeat: no-repeat;
     width: 164px;
     height: 9px;
+    display: none;
+    @include minWidth(567px) {
+      display: block;
+     }
   }
   &::after{
     content: '';
@@ -623,5 +630,9 @@ textarea {
     background-repeat: no-repeat;
     width: 164px;
     height: 9px;
+    display: none;
+    @include minWidth(567px) {
+      display: block;
+     }
   }
 }
