@@ -77,3 +77,14 @@
   background-color: $primary;
   border-color: $primary;
 }
+.btn-linear-bor-rounded{
+  text-transform: uppercase;
+  color: $light;
+  border: 1px solid #FFC686;
+  background: linear-gradient(90deg, #FFA53E 0%, #FF6D3E 100%);
+  border-radius: 10px;
+  font-size: 22px;
+  min-width: 293px;
+  height: 45px;
+  padding-top: 2px;
+}
