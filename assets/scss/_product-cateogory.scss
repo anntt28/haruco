@@ -442,6 +442,8 @@
    text-align: center;
    justify-content: center;
    border-radius: 100%;
+   color: #707070;
+   font-weight: 500;
    &:hover {
     background: $color-FF6D3E;
     color: $light;
@@ -462,6 +464,7 @@
    text-align: center;
    justify-content: center;
    border-radius: 100%;
+   font-weight: 500;
   }
  }
 }
