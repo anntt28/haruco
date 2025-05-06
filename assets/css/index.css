@@ -12370,9 +12370,14 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   -webkit-line-clamp: 2;
 }
 .item-news-overlay .text p {
-  font-size: 13px;
+  font-size: 11px;
   line-height: 2;
   letter-spacing: 0.26px;
+}
+@media (min-width: 1024px) {
+  .item-news-overlay .text p {
+    font-size: 13px;
+  }
 }
 
 .list-news-vertical {

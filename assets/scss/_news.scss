@@ -75,9 +75,12 @@
       -webkit-line-clamp: 2;
     }
     p {
-      font-size: 13px;
+      font-size: 11px;
       line-height: 2;
       letter-spacing: 0.26px;
+      @include minWidth(1024px) {
+        font-size: 13px;
+      }
     }
   }
 }
