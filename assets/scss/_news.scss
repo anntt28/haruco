@@ -179,12 +179,7 @@
   margin-top: 20px;
   .item-news-vertical {
     height: 100%;
-    @include minWidth(1200px) {
-      grid-template-columns: 302px 1fr;
-    }
-    @include maxWidth(1199px) {
-      grid-template-columns: 90px 1fr;
-    }
+    grid-template-columns: 90px 1fr;
     &:not(:last-child) {
       margin-bottom: 20px;
     }
