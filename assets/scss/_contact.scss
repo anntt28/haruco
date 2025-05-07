@@ -142,3 +142,18 @@
   }
  }
 }
+.float-contact {
+  position: fixed;
+  bottom: 40%;
+  right: 30px;
+  z-index: 99999;
+}
+.chat-zalo, .chat-facebook, .call-hotline {
+  display: block;
+  margin-bottom: 6px;
+  line-height: 0;
+}
+.float-contact img {
+  width: 45px;
+  height: 45px;
+}

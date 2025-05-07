@@ -25,6 +25,34 @@
     opacity: 0.5;
   }
 }
+.btn-bo-F13B3B{
+  background-color: #F13B3B;
+  border: none;
+  border-radius: 20px;
+  color: $light;
+  font-size: 18px;
+  font-weight: 600;
+  @include minWidth(768px) {
+    font-size: 20px;
+   }
+}
+.btn-orange-bo{
+  background-color: $color-FF6D3E;
+  border: none;
+  border-radius: 20px;
+  color: $light;
+  font-size: 18px;
+  font-weight: 600;
+  @include minWidth(768px) {
+    font-size: 20px;
+   }
+}
+.btn-blue-underline{
+  color: #119DDE;
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
 .btn-base {
   border-radius: 50px;
   color: $light;
