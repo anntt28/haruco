@@ -53,6 +53,21 @@
   border: none;
   text-decoration: underline;
 }
+.btn-orange-arrow{
+  color: $primary;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  &::after{
+    content: '';
+    background-image: url("../images/icon/ic_arrow-right-orange.svg");
+    width: 15px;
+    height: 13px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
 .btn-base {
   border-radius: 50px;
   color: $light;

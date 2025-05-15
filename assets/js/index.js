@@ -73,8 +73,8 @@ $(function () {
   });
   var swiper5 = new Swiper(".slider-blog-news", {
     loop: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 10,
     breakpoints: {
       567: {
         slidesPerView: 3,
@@ -88,8 +88,8 @@ $(function () {
   });
   var swiper5 = new Swiper(".slider-product-by-category", {
     loop: false,
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 5,
     breakpoints: {
       567: {
         slidesPerView: 3,
@@ -103,8 +103,8 @@ $(function () {
   });
   var swiper5 = new Swiper(".slider-product-by-category-small", {
     loop: false,
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 14,
     breakpoints: {
       567: {
         slidesPerView: 3,
@@ -125,9 +125,9 @@ $(function () {
     loopedSlides: 4,
     slideToClickedSlide: true,
     paginationClickable: true,
-    slidesPerView: 1,
+    slidesPerView: 2,
     slidesPerGroup: 1,
-    spaceBetween: 30,
+    spaceBetween: 10,
     navigation: {
       nextEl: ".swiper-button-next-cate",
       prevEl: ".swiper-button-prev-cate",
