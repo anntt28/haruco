@@ -181,10 +181,11 @@
             margin-top: 5px;
           }
           h6 {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.36;
             color: $main-01;
             margin-bottom: 6px;
+            font-weight: 600;
             @include minWidth(768px) {
               font-size: 22px;
             }

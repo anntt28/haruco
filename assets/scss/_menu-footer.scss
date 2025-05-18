@@ -102,9 +102,12 @@
     }
   }
   .des-intro {
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.7;
     font-weight: 400;
+    @include minWidth(768px) {
+      font-size: 17px;
+    }
   }
   .info-company-ft {
     border-bottom: 1px solid #dfdfdf;

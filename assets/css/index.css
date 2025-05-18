@@ -10118,9 +10118,14 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   }
 }
 .footer-middle .des-intro {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.7;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  .footer-middle .des-intro {
+    font-size: 17px;
+  }
 }
 .footer-middle .info-company-ft {
   border-bottom: 1px solid #dfdfdf;
@@ -11940,10 +11945,11 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   margin-top: 5px;
 }
 .quality-control-process .content .text .list-process li h6 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.36;
   color: #121F38;
   margin-bottom: 6px;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .quality-control-process .content .text .list-process li h6 {
@@ -13626,7 +13632,12 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   display: flex;
   gap: 12px;
   align-items: center;
-  padding: 19px 33px;
+  padding: 12px 25px;
+}
+@media (min-width: 768px) {
+  .list-benefits-of-purchasing li {
+    padding: 19px 33px;
+  }
 }
 .list-benefits-of-purchasing li:not(:last-child) {
   border-bottom: 1px dashed #ebc499;
@@ -13636,7 +13647,7 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   flex-shrink: 0;
 }
 .list-benefits-of-purchasing li .text h5 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.666;
   overflow: hidden;
   display: -webkit-box;
@@ -13644,6 +13655,11 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   -webkit-line-clamp: 1;
   margin-bottom: 0;
   color: #121F38;
+}
+@media (min-width: 768px) {
+  .list-benefits-of-purchasing li .text h5 {
+    font-size: 18px;
+  }
 }
 .list-benefits-of-purchasing li .text p {
   font-weight: 400;
@@ -13927,9 +13943,14 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 }
 .info-contact .content-text h2 {
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.28;
   color: #121F38;
+}
+@media (min-width: 768px) {
+  .info-contact .content-text h2 {
+    font-size: 28px;
+  }
 }
 .info-contact .content-text .des {
   font-size: 17px;
@@ -13947,13 +13968,24 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 .info-contact .content-text .list-info li {
   display: flex;
   gap: 14px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 300;
+}
+@media (min-width: 768px) {
+  .info-contact .content-text .list-info li {
+    font-size: 17px;
+  }
 }
 .info-contact .content-text .list-info li:not(:last-child) {
   border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 18px;
-  margin-bottom: 18px;
+  padding-bottom: 11px;
+  margin-bottom: 11px;
+}
+@media (min-width: 768px) {
+  .info-contact .content-text .list-info li:not(:last-child) {
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+  }
 }
 .info-contact .content-text .list-info li strong {
   color: #282828;
@@ -13984,7 +14016,9 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   z-index: 99999;
 }
 
-.chat-zalo, .chat-facebook, .call-hotline {
+.chat-zalo,
+.chat-facebook,
+.call-hotline {
   display: block;
   margin-bottom: 6px;
   line-height: 0;

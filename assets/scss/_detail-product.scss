@@ -692,7 +692,10 @@
     display: flex;
     gap: 12px;
     align-items: center;
-    padding: 19px 33px;
+    padding: 12px 25px;
+    @include minWidth(768px) {
+      padding: 19px 33px;
+    }
     &:not(:last-child) {
       border-bottom: 1px dashed #ebc499;
     }
@@ -702,7 +705,7 @@
     }
     .text {
       h5 {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.666;
         overflow: hidden;
         display: -webkit-box;
@@ -710,6 +713,9 @@
         -webkit-line-clamp: 1;
         margin-bottom: 0;
         color: $main-01;
+        @include minWidth(768px) {
+          font-size: 18px;
+        }
       }
       p {
         font-weight: 400;
